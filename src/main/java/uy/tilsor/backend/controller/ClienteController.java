@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import uy.tilsor.backend.dto.ClienteDTO;
 import uy.tilsor.backend.model.Cliente;
-import uy.tilsor.backend.service.ClienteService;
+import uy.tilsor.backend.service.IClienteService;
 
 @RestController
 @RequestMapping("/api/clientes")
 public class ClienteController {
 
     @Autowired
-    private ClienteService service;
+    private IClienteService service;
 
     @GetMapping
     public List<ClienteDTO> getAll() {
@@ -32,7 +32,6 @@ public class ClienteController {
         return toDTO(service.guardar(c));
     }
 
-    // Métodos de conversión simples
     private ClienteDTO toDTO(Cliente c) {
         ClienteDTO dto = new ClienteDTO();
         dto.setId(c.getId());

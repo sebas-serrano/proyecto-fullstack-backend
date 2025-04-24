@@ -7,14 +7,14 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Cliente {
+	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
-	private String nombre;
-
-	private String email;
+    private String nombre;
+    
+    private String email;
 
 	public Long getId() {
 		return id;
@@ -39,5 +39,5 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+    
 }
