@@ -2,11 +2,12 @@ package uy.tilsor.backend.service;
 
 import java.util.List;
 
-import uy.tilsor.backend.model.Producto;
+import uy.tilsor.backend.dto.ProductoDto;
+
 
 public interface IProductoService {
     
-	List<Producto> listar();
+	List<ProductoDto> listar();
     
-	Producto guardar(Producto p);
+	ProductoDto guardar(ProductoDto dto);
 }

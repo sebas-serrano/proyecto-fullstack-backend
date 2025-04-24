@@ -2,11 +2,12 @@ package uy.tilsor.backend.service;
 
 import java.util.List;
 
-import uy.tilsor.backend.model.Cliente;
+import uy.tilsor.backend.dto.ClienteDTO;
 
 public interface IClienteService {
     
-	List<Cliente> listar();
+	List<ClienteDTO> listar();
     
-	Cliente guardar(Cliente c);
+	ClienteDTO guardar(ClienteDTO dto);
+
 }

@@ -2,11 +2,11 @@ package uy.tilsor.backend.service;
 
 import java.util.List;
 
-import uy.tilsor.backend.model.Factura;
+import uy.tilsor.backend.dto.FacturaDto;
 
 public interface IFacturaService {
+	
+    List<FacturaDto> listar();
     
-	List<Factura> listar();
-    
-	Factura guardar(Factura f);
+    FacturaDto guardar(FacturaDto dto);
 }
